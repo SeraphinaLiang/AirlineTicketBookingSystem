@@ -17,6 +17,9 @@ public class Main extends Application {
 	public static Stage stage = new Stage();
 	public static SQLDemo sql = new SQLDemo();
 	
+	public static String managerAccount="airline";
+	public static String managerPassword="00000000";
+	
 	public static void main(String[] args) {
 		launch(args);
 

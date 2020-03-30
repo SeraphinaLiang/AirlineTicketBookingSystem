@@ -18,7 +18,7 @@
                   <Font name="Bookman Old Style Bold" size="17.0" />
                </font>
             </Label>
-            <TextField fx:id="tfDeparture" layoutX="71.0" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="133.0" promptText="departure">
+            <TextField fx:id="tfDeparture" layoutX="71.0" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="133.0" promptText="departure city">
                <font>
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
@@ -33,7 +33,7 @@
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="tfDestination" layoutX="245.0" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="133.0" promptText="destination">
+            <TextField fx:id="tfDestination" layoutX="245.0" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="133.0" promptText="destination city">
                <font>
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
@@ -63,9 +63,9 @@
                </font>
             </Label>
             <DatePicker fx:id="returnDate" layoutX="138.0" layoutY="151.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="27.0" prefWidth="144.0" />
-            <Button fx:id="btSearchFlight" layoutX="312.0" layoutY="151.0" mnemonicParsing="false" onAction="#searchFlight" prefHeight="27.0" prefWidth="124.0" style="-fx-background-color: #87CEEB;" text="Search Flights" textFill="#14405e">
+            <Button fx:id="btSearchFlight" layoutX="312.0" layoutY="151.0" mnemonicParsing="false" onAction="#searchFlight" prefHeight="16.0" prefWidth="104.0" style="-fx-background-color: #87CEEB;" text="Search Flights" textFill="#14405e">
                <font>
-                  <Font name="Bookman Old Style" size="14.0" />
+                  <Font name="Bookman Old Style" size="12.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -77,7 +77,7 @@
       <Pane layoutX="14.0" layoutY="213.0" prefHeight="277.0" prefWidth="454.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="280.0" layoutY="-3.0" stroke="#5db3f545" strokeType="INSIDE" strokeWidth="5.0" width="454.0" />
-            <ListView fx:id="flightInfo" layoutX="4.0" layoutY="1.0" opacity="0.86" prefHeight="231.0" prefWidth="446.0" style="-fx-background-color: #F0F8FF;">
+            <ListView fx:id="flightInfo" layoutX="4.0" layoutY="1.0" opacity="0.86" prefHeight="239.0" prefWidth="446.0" style="-fx-background-color: #F0F8FF;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -85,15 +85,15 @@
                   <Insets top="3.0" />
                </padding>
             </ListView>
-            <Button fx:id="btBook" layoutX="390.0" layoutY="240.0" mnemonicParsing="false" onAction="#bookFlight" prefHeight="27.0" prefWidth="56.0" style="-fx-background-color: #87CEEB;" text="Book" textFill="#14405e">
+            <Button fx:id="btBook" layoutX="397.0" layoutY="245.0" mnemonicParsing="false" onAction="#bookFlight" prefHeight="7.0" prefWidth="49.0" style="-fx-background-color: #87CEEB;" text="Book" textFill="#14405e">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <font>
-                  <Font name="Bookman Old Style" size="14.0" />
+                  <Font name="Bookman Old Style" size="12.0" />
                </font>
             </Button>
-            <Separator layoutX="4.0" layoutY="233.0" opacity="0.24" prefHeight="7.0" prefWidth="446.0" />
+            <Separator layoutX="4.0" layoutY="239.0" opacity="0.24" prefHeight="7.0" prefWidth="446.0" />
          </children>
       </Pane>
       <Pane layoutX="472.0" layoutY="14.0" prefHeight="477.0" prefWidth="285.0">
@@ -123,7 +123,7 @@
                   <Font name="Bookman Old Style" size="11.0" />
                </font>
             </TextField>
-            <RadioButton layoutX="84.0" layoutY="158.0" mnemonicParsing="false" selected="true" text="Mr" textFill="#223b6f">
+            <RadioButton layoutX="84.0" layoutY="158.0" mnemonicParsing="false" selected="true" text="Male" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="12.0" />
                </font>
@@ -131,7 +131,7 @@
                   <ToggleGroup fx:id="gender" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="131.0" layoutY="158.0" mnemonicParsing="false" text="Ms" textFill="#223b6f" toggleGroup="$gender">
+            <RadioButton layoutX="143.0" layoutY="158.0" mnemonicParsing="false" text="Female" textFill="#223b6f" toggleGroup="$gender">
                <font>
                   <Font name="Bookman Old Style" size="12.0" />
                </font>
@@ -173,6 +173,92 @@
                </font>
             </Label>
             <DatePicker layoutX="102.0" layoutY="204.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="24.0" prefWidth="110.0" />
+            <Separator layoutX="2.0" layoutY="233.0" opacity="0.31" prefHeight="7.0" prefWidth="285.0" />
+            <Label layoutX="21.0" layoutY="240.0" text="Your flight" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tfFlightNumber" layoutX="108.0" layoutY="240.0" text="AL1009" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="264.0" text="Departure/Arrival" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="286.0" text="Departure time" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="308.0" text="Arrival time" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="331.0" text="Class" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tfFlightNumber1" layoutX="162.0" layoutY="264.0" text="Paris/London" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tfFlightNumber2" layoutX="143.0" layoutY="286.0" text="2018-05-20 10:25" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tfFlightNumber21" layoutX="120.0" layoutY="308.0" text="2018-05-21 10:25" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="72.0" layoutY="328.0" mnemonicParsing="false" opacity="0.8" style="-fx-background-color: #87CEEB;" text="Economy" textFill="#223b6f">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+               <font>
+                  <Font name="Bookman Old Style" size="11.0" />
+               </font>
+            </MenuButton>
+            <Separator layoutY="383.0" opacity="0.31" prefHeight="7.0" prefWidth="280.0" />
+            <Label layoutX="14.0" layoutY="386.0" prefHeight="16.0" prefWidth="257.0" text="Please notice that all the blanks above must be filled." textFill="#223b6f" wrapText="true">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="402.0" prefHeight="27.0" prefWidth="257.0" text="Detail information of your flight is available at My Booking Page." textFill="#223b6f" wrapText="true">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="10.0" />
+               </font>
+            </Label>
+            <Separator layoutY="429.0" opacity="0.31" prefHeight="7.0" prefWidth="280.0" />
+            <Button layoutX="162.0" layoutY="436.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #87CEEB;" text="Comfirm Order" textFill="#14405e">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Bookman Old Style" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="21.0" layoutY="355.0" text="Free baggage allowance" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tfFlightNumber211" layoutX="198.0" layoutY="355.0" text="24KG" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="480.0" layoutX="-8.0" layoutY="-4.0" stroke="#5db3f545" strokeType="INSIDE" strokeWidth="5.0" width="295.0" />
          </children>
       </Pane>
    </children>
