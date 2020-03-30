@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="529.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screen.homepageController">
+   <children>
+      <Pane layoutX="141.0" layoutY="111.0" prefHeight="453.0" prefWidth="764.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="764.0" style="-fx-background-color: #87CEEB;">
+               <children>
+                  <Button fx:id="btFlight" mnemonicParsing="false" onAction="#toFlightSchedulePage" prefHeight="34.0" prefWidth="159.0" style="-fx-background-color: #87CEEB; -fx-border-color: #87CEEB;" text="Flight Schedule" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="1.0" top="2.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century Schoolbook Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="20.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/plane.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btBooking" mnemonicParsing="false" onAction="#toMyBookingPage" prefHeight="29.0" prefWidth="159.0" style="-fx-background-color: #87CEEB; -fx-border-color: #87CEEB;" text=" My Booking" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Century Schoolbook Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="21.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/book.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Separator opacity="0.14" orientation="VERTICAL" prefHeight="200.0" />
+                  <Pane prefHeight="32.0" prefWidth="394.0" style="-fx-background-color: #87CEEB;" />
+                  <Separator opacity="0.11" orientation="VERTICAL" prefHeight="200.0" />
+                  <Button fx:id="btExit" mnemonicParsing="false" onAction="#toExit" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #87CEEB;" text="Exit" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century Schoolbook Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <Pane fx:id="homePane" layoutY="30.0" prefHeight="499.0" prefWidth="764.0" style="-fx-background-color: #F0F8FF;">
+               <children>
+                  <Label layoutX="145.0" layoutY="44.0" prefHeight="85.0" prefWidth="619.0" text=" Airline Ticket Booking">
+                     <font>
+                        <Font name="Candara Light" size="49.0" />
+                     </font>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#212b65" />
+                              <Stop color="#3f9eab" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="75.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../picture/winner.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
