@@ -23,7 +23,7 @@ public class managePageController implements Initializable {
 	private Button btLogin;
 
 	@FXML
-	private TextField tfPassword;
+    private PasswordField tfPassword;
 
 	@FXML
 	private TextField tfAccount;

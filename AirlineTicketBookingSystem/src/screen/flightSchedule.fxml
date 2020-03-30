@@ -77,7 +77,7 @@
       <Pane layoutX="14.0" layoutY="213.0" prefHeight="277.0" prefWidth="454.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="280.0" layoutY="-3.0" stroke="#5db3f545" strokeType="INSIDE" strokeWidth="5.0" width="454.0" />
-            <ListView fx:id="flightInfo" layoutX="4.0" layoutY="1.0" opacity="0.86" prefHeight="239.0" prefWidth="446.0" style="-fx-background-color: #F0F8FF;">
+            <ListView fx:id="flightInfo" layoutX="4.0" layoutY="1.0" opacity="0.8" prefHeight="239.0" prefWidth="446.0">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

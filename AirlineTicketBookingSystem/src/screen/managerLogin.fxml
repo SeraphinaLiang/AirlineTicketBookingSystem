@@ -28,7 +28,6 @@
                </font>
             </Label>
             <TextField fx:id="tfAccount" layoutX="139.0" layoutY="60.0" minHeight="-Infinity" opacity="0.94" prefHeight="20.0" prefWidth="116.0" />
-            <TextField fx:id="tfPassword" layoutX="139.0" layoutY="90.0" minHeight="-Infinity" opacity="0.94" prefHeight="20.0" prefWidth="116.0" />
             <Button fx:id="btLogin" layoutX="197.0" layoutY="123.0" mnemonicParsing="false" onAction="#managerLogin" opacity="0.93" style="-fx-background-color: #87CEEB;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Bookman Old Style Bold" size="13.0" />
@@ -38,6 +37,7 @@
                </cursor>
             </Button>
             <Rectangle arcHeight="5.0" arcWidth="10.0" disable="true" fill="#f2f9ff00" height="167.0" layoutX="-20.0" opacity="0.45" stroke="SKYBLUE" strokeDashOffset="5.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="5.0" width="318.0" />
+            <PasswordField fx:id="tfPassword" layoutX="139.0" layoutY="88.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="116.0" />
          </children>
       </Pane>
    </children>
