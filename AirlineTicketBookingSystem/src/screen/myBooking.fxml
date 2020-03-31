@@ -192,7 +192,7 @@
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
             </Label>
-            <MenuButton fx:id="mbBaggage" layoutX="247.0" layoutY="383.0" mnemonicParsing="false" onAction="#purchaseBaggageAllowance" opacity="0.8" prefHeight="22.0" prefWidth="126.0" style="-fx-background-color: #87CEEB;" text="24KG--One piece" textFill="#223b6f">
+            <MenuButton fx:id="mbBaggage" layoutX="247.0" layoutY="383.0" mnemonicParsing="false" onAction="#purchaseBaggageAllowance" opacity="0.8" prefHeight="22.0" prefWidth="126.0" style="-fx-background-color: #87CEEB;" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style" size="11.0" />
                </font>
@@ -206,7 +206,7 @@
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
             </Label>
-            <MenuButton fx:id="mbSpecialMeal" layoutX="140.0" layoutY="417.0" mnemonicParsing="false" onAction="#selectSpecialMeal" opacity="0.8" prefHeight="22.0" prefWidth="105.0" style="-fx-background-color: #87CEEB;" text="No lactose" textFill="#223b6f">
+            <MenuButton fx:id="mbSpecialMeal" layoutX="140.0" layoutY="417.0" mnemonicParsing="false" onAction="#selectSpecialMeal" opacity="0.8" prefHeight="22.0" prefWidth="105.0" style="-fx-background-color: #87CEEB;" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style" size="11.0" />
                </font>

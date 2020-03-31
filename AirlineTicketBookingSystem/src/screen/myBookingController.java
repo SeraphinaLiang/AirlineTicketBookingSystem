@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Rectangle;
 import main.Main;
@@ -60,8 +61,34 @@ public class myBookingController implements Initializable {
 //----------------------------------------------------------------------------------------------
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-  
+       this.initMenuButton();
+    	
 	}
+    
+    void initMenuButton() {
+    	//------------baggage allowance--------------
+    	MenuItem bag1 = new MenuItem("24KG--One piece");
+    	MenuItem bag2 = new MenuItem("48KG--Two pieces");
+    	this.mbBaggage.getItems().clear();
+    	this.mbBaggage.getItems().addAll(bag1,bag2);
+    	//-----------class-------------------------
+    	MenuItem EC = new MenuItem("Economy");
+    	MenuItem BC = new MenuItem("Business");
+    	MenuItem FC = new MenuItem("First-Class");
+    	this.mbChangeClass.getItems().clear();
+    	this.mbChangeClass.getItems().addAll(EC,BC,FC);
+    	//---------------meal------------------------
+    	MenuItem meal7 = new MenuItem("No lactose");
+    	MenuItem meal1 = new MenuItem("Muslim");
+    	MenuItem meal2 = new MenuItem("Diabetic");
+    	MenuItem meal3 = new MenuItem("Low Sodium");
+    	MenuItem meal4 = new MenuItem("Vegetarian");
+    	MenuItem meal5 = new MenuItem("Kosher");
+    	
+    	this.mbSpecialMeal.getItems().clear();
+    	this.mbSpecialMeal.getItems().addAll(meal7,meal1,meal2,meal3,meal4,meal5);
+    	
+    }
     
     void refreshSeat() {
     	//-------------A-----------------
