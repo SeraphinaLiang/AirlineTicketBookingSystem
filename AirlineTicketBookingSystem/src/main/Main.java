@@ -21,6 +21,8 @@ public class Main extends Application {
 	public static String managerPassword="00000000";
 	
 	public static void main(String[] args) {
+		
+		sql.initDatabase();
 		launch(args);
 
 	}

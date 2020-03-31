@@ -16,8 +16,8 @@
                   <Font name="Bookman Old Style Bold" size="15.0" />
                </font>
             </Label>
-            <ListView layoutX="32.0" layoutY="57.0" prefHeight="144.0" prefWidth="700.0" />
-            <Button layoutX="665.0" layoutY="207.0" mnemonicParsing="false" style="-fx-background-color: #87CEEB;" text="Cancel" textFill="WHITE">
+            <ListView fx:id="lvAllFlight" layoutX="32.0" layoutY="57.0" prefHeight="144.0" prefWidth="700.0" />
+            <Button fx:id="btCancel" layoutX="665.0" layoutY="207.0" mnemonicParsing="false" onAction="#cancelFlight" style="-fx-background-color: #87CEEB;" text="Cancel" textFill="WHITE">
                <font>
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
@@ -37,7 +37,7 @@
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="108.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="106.0">
+                  <TextField fx:id="tfflightNumber" layoutX="108.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="106.0">
                      <font>
                         <Font name="Bookman Old Style" size="11.0" />
                      </font>
@@ -62,47 +62,47 @@
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="108.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="106.0">
+                  <TextField fx:id="tfDeparture" layoutX="108.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="106.0">
                      <font>
                         <Font name="Bookman Old Style" size="11.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="108.0" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="106.0">
+                  <TextField fx:id="tfArrival" layoutX="108.0" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="106.0">
                      <font>
                         <Font name="Bookman Old Style" size="11.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="222.0" layoutY="93.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="64.0">
+                  <TextField fx:id="departureTime" layoutX="222.0" layoutY="93.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="64.0" promptText="HH:MM:SS">
                      <font>
-                        <Font name="Bookman Old Style" size="11.0" />
+                        <Font name="Bookman Old Style" size="9.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="222.0" layoutY="121.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="64.0">
+                  <TextField fx:id="arrivalTime" layoutX="222.0" layoutY="121.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="64.0" promptText="HH:MM:SS">
                      <font>
-                        <Font name="Bookman Old Style" size="11.0" />
+                        <Font name="Bookman Old Style" size="9.0" />
                      </font>
                   </TextField>
-                  <Label layoutX="240.0" layoutY="6.0" text="Type" textFill="#223b6f">
+                  <Label layoutX="227.0" layoutY="5.0" text="Plane Type" textFill="#223b6f">
                      <font>
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="240.0" layoutY="35.0" text="Company" textFill="#223b6f">
+                  <Label layoutX="227.0" layoutY="35.0" text="Company" textFill="#223b6f">
                      <font>
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="310.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="106.0">
+                  <TextField fx:id="tfPlaneType" layoutX="310.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="106.0">
                      <font>
                         <Font name="Bookman Old Style" size="11.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="310.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="106.0">
+                  <TextField fx:id="tfCompany" layoutX="310.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="106.0">
                      <font>
                         <Font name="Bookman Old Style" size="11.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="369.0" layoutY="120.0" mnemonicParsing="false" style="-fx-background-color: #87CEEB;" text="Add" textFill="WHITE">
+                  <Button fx:id="btAdd" layoutX="369.0" layoutY="120.0" mnemonicParsing="false" onAction="#addFlight" style="-fx-background-color: #87CEEB;" text="Add" textFill="WHITE">
                      <font>
                         <Font name="Bookman Old Style" size="14.0" />
                      </font>
@@ -110,10 +110,10 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <DatePicker layoutX="108.0" layoutY="93.0" minHeight="-Infinity" prefHeight="24.0" prefWidth="106.0" />
-                  <DatePicker layoutX="108.0" layoutY="121.0" minHeight="-Infinity" prefHeight="24.0" prefWidth="106.0" />
+                  <DatePicker fx:id="departureDay" layoutX="108.0" layoutY="93.0" minHeight="-Infinity" prefHeight="24.0" prefWidth="106.0" />
+                  <DatePicker fx:id="arrivalDay" layoutX="108.0" layoutY="121.0" minHeight="-Infinity" prefHeight="24.0" prefWidth="106.0" />
                   <Separator layoutX="420.0" layoutY="-3.0" opacity="0.38" orientation="VERTICAL" prefHeight="221.0" prefWidth="10.0" />
-                  <ListView layoutX="430.0" layoutY="18.0" prefHeight="92.0" prefWidth="263.0" />
+                  <ListView fx:id="lvPassenger" layoutX="430.0" layoutY="18.0" prefHeight="92.0" prefWidth="263.0" />
                   <Label layoutX="431.0" layoutY="-1.0" text="Passengers" textFill="#223b6f">
                      <font>
                         <Font name="Bookman Old Style Italic" size="14.0" />
@@ -144,22 +144,22 @@
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="514.0" layoutY="133.0" text="39.8%" textFill="#223b6f">
+                  <Label fx:id="totalRate" layoutX="514.0" layoutY="133.0" text="39.8%" textFill="#223b6f">
                      <font>
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="583.0" layoutY="149.0" text="12.7%" textFill="#223b6f">
+                  <Label fx:id="economyRate" layoutX="583.0" layoutY="149.0" text="12.7%" textFill="#223b6f">
                      <font>
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="583.0" layoutY="165.0" text="5.6%" textFill="#223b6f">
+                  <Label fx:id="businessRate" layoutX="583.0" layoutY="165.0" text="5.6%" textFill="#223b6f">
                      <font>
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="555.0" layoutY="181.0" text="82.5%" textFill="#223b6f">
+                  <Label fx:id="firstclassRate" layoutX="555.0" layoutY="181.0" text="82.5%" textFill="#223b6f">
                      <font>
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>

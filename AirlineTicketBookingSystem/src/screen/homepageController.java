@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import main.Main;
 
 public class homepageController implements Initializable {
 	@FXML
@@ -91,6 +92,7 @@ public class homepageController implements Initializable {
 
 	@FXML
 	void toExit(ActionEvent event) {
+		Main.getSQLDemo().closeDatabase();
 		main.Main.getPrimaryStage().close();
 	}
 

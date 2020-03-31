@@ -23,7 +23,7 @@
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="147.0" layoutY="46.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="104.0">
+            <TextField fx:id="tfPassportNumber" layoutX="147.0" layoutY="46.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="104.0">
                <font>
                   <Font name="Bookman Old Style" size="11.0" />
                </font>
@@ -33,12 +33,12 @@
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="147.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="104.0">
+            <TextField fx:id="tfBookingNumber" layoutX="147.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="104.0">
                <font>
                   <Font name="Bookman Old Style" size="11.0" />
                </font>
             </TextField>
-            <Button layoutX="201.0" layoutY="102.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="50.0" style="-fx-background-color: #87CEEB;" text="Search" textFill="#14405e">
+            <Button fx:id="btSearch" layoutX="201.0" layoutY="102.0" mnemonicParsing="false" onAction="#searchMyBooking" prefHeight="21.0" prefWidth="50.0" style="-fx-background-color: #87CEEB;" text="Search" textFill="#14405e">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -178,7 +178,7 @@
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
             </Label>
-            <MenuButton layoutX="150.0" layoutY="348.0" mnemonicParsing="false" opacity="0.8" prefHeight="22.0" prefWidth="88.0" style="-fx-background-color: #87CEEB;" text="Economy" textFill="#223b6f">
+            <MenuButton fx:id="mbChangeClass" layoutX="150.0" layoutY="348.0" mnemonicParsing="false" onAction="#changeClass" opacity="0.8" prefHeight="22.0" prefWidth="88.0" style="-fx-background-color: #87CEEB;" text="Economy" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style" size="11.0" />
                </font>
@@ -192,7 +192,7 @@
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
             </Label>
-            <MenuButton layoutX="247.0" layoutY="383.0" mnemonicParsing="false" opacity="0.8" prefHeight="22.0" prefWidth="126.0" style="-fx-background-color: #87CEEB;" text="24KG--One piece" textFill="#223b6f">
+            <MenuButton fx:id="mbBaggage" layoutX="247.0" layoutY="383.0" mnemonicParsing="false" onAction="#purchaseBaggageAllowance" opacity="0.8" prefHeight="22.0" prefWidth="126.0" style="-fx-background-color: #87CEEB;" text="24KG--One piece" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style" size="11.0" />
                </font>
@@ -206,7 +206,7 @@
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
             </Label>
-            <MenuButton layoutX="140.0" layoutY="417.0" mnemonicParsing="false" opacity="0.8" prefHeight="22.0" prefWidth="105.0" style="-fx-background-color: #87CEEB;" text="No lactose" textFill="#223b6f">
+            <MenuButton fx:id="mbSpecialMeal" layoutX="140.0" layoutY="417.0" mnemonicParsing="false" onAction="#selectSpecialMeal" opacity="0.8" prefHeight="22.0" prefWidth="105.0" style="-fx-background-color: #87CEEB;" text="No lactose" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style" size="11.0" />
                </font>
@@ -238,16 +238,16 @@
                         <Image url="@../picture/seat.PNG" />
                      </image>
                   </ImageView>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="44.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="A1" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="44.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
                   <Label layoutX="205.0" layoutY="53.0" prefHeight="16.0" prefWidth="76.0" text="available" textFill="#223b6f">
                      <font>
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>
                   </Label>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="44.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="45.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="45.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="45.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="B1" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="44.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="C1" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="45.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="D1" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="45.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="E1" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="45.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="181.0" layoutY="53.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eb5757" height="17.0" layoutX="181.0" layoutY="81.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
                   <Label layoutX="205.0" layoutY="82.0" prefHeight="16.0" prefWidth="76.0" text="booked" textFill="#223b6f">
@@ -255,37 +255,37 @@
                         <Font name="Bookman Old Style Italic" size="14.0" />
                      </font>
                   </Label>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="71.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="71.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="72.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="72.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="72.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
-                  <Button layoutX="181.0" layoutY="206.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="61.0" style="-fx-background-color: #87CEEB;" text="Comfirm" textFill="#14405e">
+                  <Rectangle fx:id="A2" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="71.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="B2" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="71.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="C2" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="72.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="D2" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="72.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="E2" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="72.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="A3" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="B3" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="C3" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="D3" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="E3" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="A4" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="B4" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="C4" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="D4" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="E4" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="A5" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="B5" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="C5" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="D5" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="E5" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="A6" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="B6" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="C6" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="D6" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="E6" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="A7" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="B7" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="C7" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="D7" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle fx:id="E7" arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Button fx:id="btComfirmSeat" layoutX="181.0" layoutY="206.0" mnemonicParsing="false" onAction="#comfirmSeatSelection" prefHeight="21.0" prefWidth="61.0" style="-fx-background-color: #87CEEB;" text="Comfirm" textFill="#14405e">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -299,7 +299,7 @@
                         <Font name="Bookman Old Style Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Button layoutX="23.0" layoutY="343.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="86.0" style="-fx-background-color: #87CEEB;" text="Pay" textFill="#14405e">
+                  <Button fx:id="btpay" layoutX="23.0" layoutY="343.0" mnemonicParsing="false" onAction="#payTicket" prefHeight="21.0" prefWidth="86.0" style="-fx-background-color: #87CEEB;" text="Pay" textFill="#14405e">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -307,7 +307,7 @@
                         <Font name="Bookman Old Style" size="10.0" />
                      </font>
                   </Button>
-                  <Button layoutX="122.0" layoutY="343.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="86.0" style="-fx-background-color: #cc5a5a;" text="Cancel Flight" textFill="WHITE">
+                  <Button fx:id="btcancel" layoutX="122.0" layoutY="343.0" mnemonicParsing="false" onAction="#cancelFlight" prefHeight="21.0" prefWidth="86.0" style="-fx-background-color: #cc5a5a;" text="Cancel Flight" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -315,7 +315,7 @@
                         <Font name="Bookman Old Style" size="10.0" />
                      </font>
                   </Button>
-                  <Button layoutX="198.0" layoutY="266.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="68.0" style="-fx-background-color: #87CEEB;" text="Download" textFill="#14405e">
+                  <Button fx:id="btDownloadForm" layoutX="198.0" layoutY="266.0" mnemonicParsing="false" onAction="#downloadTicketCollectionForm" prefHeight="21.0" prefWidth="68.0" style="-fx-background-color: #87CEEB;" text="Download" textFill="#14405e">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -333,7 +333,7 @@
                         <Font name="Bookman Old Style Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Button layoutX="109.0" layoutY="301.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="68.0" style="-fx-background-color: #87CEEB;" text="Download" textFill="#14405e">
+                  <Button fx:id="btBill" layoutX="109.0" layoutY="301.0" mnemonicParsing="false" onAction="#downloadTicketBills" prefHeight="21.0" prefWidth="68.0" style="-fx-background-color: #87CEEB;" text="Download" textFill="#14405e">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
