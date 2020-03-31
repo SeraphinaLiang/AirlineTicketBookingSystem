@@ -1,10 +1,360 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="499.0" prefWidth="764.0" style="-fx-background-color: #F0F8FF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screen.myBookingController">
-	<!-- TODO Add Nodes -->
+   <children>
+      <Pane layoutX="145.0" layoutY="26.0" prefHeight="499.0" prefWidth="764.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="21.0" layoutY="14.0" prefHeight="24.0" prefWidth="144.0" text="Search my booking" textFill="#0f315e">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="50.0" prefHeight="16.0" prefWidth="126.0" text="Passport Number" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="147.0" layoutY="46.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="104.0">
+               <font>
+                  <Font name="Bookman Old Style" size="11.0" />
+               </font>
+            </TextField>
+            <Label layoutX="21.0" layoutY="78.0" prefHeight="16.0" prefWidth="126.0" text="Booking Number" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="147.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="104.0">
+               <font>
+                  <Font name="Bookman Old Style" size="11.0" />
+               </font>
+            </TextField>
+            <Button layoutX="201.0" layoutY="102.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="50.0" style="-fx-background-color: #87CEEB;" text="Search" textFill="#14405e">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Bookman Old Style" size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="21.0" layoutY="137.0" prefHeight="24.0" prefWidth="144.0" text="My Flight Details" textFill="#0f315e">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="160.0" text="Flight" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="160.0" text="AL1009" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="177.0" text="Departure/Arrival" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="183.0" layoutY="177.0" text="Paris/London" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="195.0" text="Departure time" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="213.0" text="Arrival time" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="137.0" layoutY="213.0" text="2018-05-20 10:25" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="165.0" layoutY="195.0" text="2018-05-20 10:25" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="230.0" text="Class" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="230.0" text="Economy" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="245.0" text="Free baggage allowance" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="221.0" layoutY="245.0" text="24KG --One piece" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="161.0" layoutY="160.0" text="Company" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="233.0" layoutY="160.0" prefHeight="16.0" prefWidth="111.0" text="Air France-KLM" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="354.0" layoutY="160.0" text="Type" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="392.0" layoutY="160.0" prefHeight="16.0" prefWidth="50.0" text="B747" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="261.0" text="Terminal" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="78.0" layoutY="277.0" text="Takeoff" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="78.0" layoutY="293.0" text="Arrival" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="277.0" text="T1" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="293.0" text="T2" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="309.0" text="Pay status" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="128.0" layoutY="309.0" text="No" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="327.0" prefHeight="24.0" prefWidth="66.0" text="Options" textFill="#0f315e">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="10.0" layoutY="327.0" opacity="0.42" prefHeight="0.0" prefWidth="437.0" />
+            <Separator layoutX="10.0" layoutY="135.0" opacity="0.42" prefHeight="0.0" prefWidth="437.0" />
+            <Label layoutX="45.0" layoutY="351.0" text="Change Class" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="150.0" layoutY="348.0" mnemonicParsing="false" opacity="0.8" prefHeight="22.0" prefWidth="88.0" style="-fx-background-color: #87CEEB;" text="Economy" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style" size="11.0" />
+               </font>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </MenuButton>
+            <Label layoutX="45.0" layoutY="386.0" text="Purchase baggage allowance" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="247.0" layoutY="383.0" mnemonicParsing="false" opacity="0.8" prefHeight="22.0" prefWidth="126.0" style="-fx-background-color: #87CEEB;" text="24KG--One piece" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style" size="11.0" />
+               </font>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </MenuButton>
+            <Label layoutX="45.0" layoutY="420.0" text="Special Meal" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="140.0" layoutY="417.0" mnemonicParsing="false" opacity="0.8" prefHeight="22.0" prefWidth="105.0" style="-fx-background-color: #87CEEB;" text="No lactose" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style" size="11.0" />
+               </font>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </MenuButton>
+            <Label layoutX="173.0" layoutY="230.0" prefHeight="16.0" prefWidth="38.0" text="Seat" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="212.0" layoutY="230.0" text="9E" textFill="#223b6f">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="444.0" layoutY="2.0" opacity="0.32" orientation="VERTICAL" prefHeight="500.0" prefWidth="6.0" />
+            <Pane layoutX="450.0" layoutY="-4.0" prefHeight="499.0" prefWidth="316.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="24.0" prefWidth="104.0" text="Select a seat" textFill="#0f315e">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="193.0" fitWidth="144.0" layoutX="12.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../picture/seat.PNG" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="44.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Label layoutX="205.0" layoutY="53.0" prefHeight="16.0" prefWidth="76.0" text="available" textFill="#223b6f">
+                     <font>
+                        <Font name="Bookman Old Style Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="44.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="45.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="45.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="45.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="181.0" layoutY="53.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eb5757" height="17.0" layoutX="181.0" layoutY="81.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Label layoutX="205.0" layoutY="82.0" prefHeight="16.0" prefWidth="76.0" text="booked" textFill="#223b6f">
+                     <font>
+                        <Font name="Bookman Old Style Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="71.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="71.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="72.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="72.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="72.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="102.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="128.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="155.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="181.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="26.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="43.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="87.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="105.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#56afeb" height="17.0" layoutX="122.0" layoutY="208.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Button layoutX="181.0" layoutY="206.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="61.0" style="-fx-background-color: #87CEEB;" text="Comfirm" textFill="#14405e">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bookman Old Style" size="10.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutY="238.0" opacity="0.42" prefHeight="3.0" prefWidth="316.0" />
+                  <Label layoutX="14.0" layoutY="241.0" prefHeight="24.0" prefWidth="88.0" text="Check Out" textFill="#0f315e">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="23.0" layoutY="343.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="86.0" style="-fx-background-color: #87CEEB;" text="Pay" textFill="#14405e">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bookman Old Style" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="122.0" layoutY="343.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="86.0" style="-fx-background-color: #cc5a5a;" text="Cancel Flight" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bookman Old Style" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="198.0" layoutY="266.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="68.0" style="-fx-background-color: #87CEEB;" text="Download" textFill="#14405e">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bookman Old Style" size="10.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="19.0" layoutY="268.0" text="Ticket Collection Form" textFill="#223b6f">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="303.0" text="Ticket Bills" textFill="#223b6f">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="109.0" layoutY="301.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="68.0" style="-fx-background-color: #87CEEB;" text="Download" textFill="#14405e">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bookman Old Style" size="10.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="198.0" layoutY="287.0" text="Available after payment" textFill="#223b6f">
+                     <font>
+                        <Font name="Bookman Old Style" size="9.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebd759" height="17.0" layoutX="181.0" layoutY="111.0" opacity="0.51" stroke="#7c809a" strokeType="INSIDE" width="17.0" />
+                  <Label layoutX="205.0" layoutY="112.0" prefHeight="16.0" prefWidth="76.0" text="your seat" textFill="#223b6f">
+                     <font>
+                        <Font name="Bookman Old Style Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
