@@ -178,43 +178,16 @@
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
             </Label>
-            <MenuButton fx:id="mbChangeClass" layoutX="150.0" layoutY="348.0" mnemonicParsing="false" onAction="#changeClass" opacity="0.8" prefHeight="22.0" prefWidth="88.0" style="-fx-background-color: #87CEEB;" text="Economy" textFill="#223b6f">
-               <font>
-                  <Font name="Bookman Old Style" size="11.0" />
-               </font>
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
-               </items>
-            </MenuButton>
             <Label layoutX="45.0" layoutY="386.0" text="Purchase baggage allowance" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
             </Label>
-            <MenuButton fx:id="mbBaggage" layoutX="247.0" layoutY="383.0" mnemonicParsing="false" onAction="#purchaseBaggageAllowance" opacity="0.8" prefHeight="22.0" prefWidth="126.0" style="-fx-background-color: #87CEEB;" text="---" textFill="#223b6f">
-               <font>
-                  <Font name="Bookman Old Style" size="11.0" />
-               </font>
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
-               </items>
-            </MenuButton>
             <Label layoutX="45.0" layoutY="420.0" text="Special Meal" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
             </Label>
-            <MenuButton fx:id="mbSpecialMeal" layoutX="140.0" layoutY="417.0" mnemonicParsing="false" onAction="#selectSpecialMeal" opacity="0.8" prefHeight="22.0" prefWidth="105.0" style="-fx-background-color: #87CEEB;" text="---" textFill="#223b6f">
-               <font>
-                  <Font name="Bookman Old Style" size="11.0" />
-               </font>
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
-               </items>
-            </MenuButton>
             <Label layoutX="173.0" layoutY="230.0" prefHeight="16.0" prefWidth="38.0" text="Seat" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Bold" size="14.0" />
@@ -354,6 +327,9 @@
                   </Label>
                </children>
             </Pane>
+            <ComboBox fx:id="cbChangeClass" layoutX="156.0" layoutY="351.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#changeClass" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: #87CEEB;" />
+            <ComboBox fx:id="cbBaggage" layoutX="259.0" layoutY="386.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#purchaseBaggageAllowance" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: #87CEEB;" />
+            <ComboBox fx:id="cbSpecialMeal" layoutX="156.0" layoutY="420.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#selectSpecialMeal" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: #87CEEB;" />
          </children>
       </Pane>
    </children>

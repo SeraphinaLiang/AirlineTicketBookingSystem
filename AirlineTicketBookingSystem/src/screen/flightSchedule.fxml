@@ -219,15 +219,6 @@
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
             </Label>
-            <MenuButton layoutX="72.0" layoutY="328.0" mnemonicParsing="false" opacity="0.8" style="-fx-background-color: #87CEEB;" text="Economy" textFill="#223b6f">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-               <font>
-                  <Font name="Bookman Old Style" size="11.0" />
-               </font>
-            </MenuButton>
             <Separator layoutY="383.0" opacity="0.31" prefHeight="7.0" prefWidth="280.0" />
             <Label layoutX="14.0" layoutY="386.0" prefHeight="16.0" prefWidth="257.0" text="Please notice that all the blanks above must be filled." textFill="#223b6f" wrapText="true">
                <font>
@@ -258,8 +249,9 @@
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
             </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="480.0" layoutX="-8.0" layoutY="-4.0" stroke="#5db3f545" strokeType="INSIDE" strokeWidth="5.0" width="295.0" />
+            <ComboBox fx:id="cbClass" layoutX="65.0" layoutY="328.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="105.0" style="-fx-background-color: #87CEEB;" />
          </children>
       </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="480.0" layoutX="464.0" layoutY="10.0" stroke="#5db3f545" strokeType="INSIDE" strokeWidth="5.0" width="295.0" />
    </children>
 </AnchorPane>

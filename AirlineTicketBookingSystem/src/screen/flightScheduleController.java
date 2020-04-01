@@ -47,6 +47,10 @@ public class flightScheduleController implements Initializable {
 
 	@FXML
 	private Button btBook;
+	
+	 @FXML
+	    private ComboBox<String> cbClass;
+
 
 
 //----------------------------------------------------------------------------------------------
@@ -54,6 +58,11 @@ public class flightScheduleController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.returnDate.setDisable(true);
+		
+		this.cbClass.getItems().clear();
+		this.cbClass.getItems().addAll("Economy","Business","First-Class");
+		
+		initFlightCell();
 	}
 
 	@FXML
@@ -118,6 +127,6 @@ public class flightScheduleController implements Initializable {
 				return cell;
 			}
 		});
-		this.flightInfo.setItems(Utility.getAllAvailableFlight());
+		this.flightInfo.setItems(Utility.getAllAvailableFlightSchedule());
 	}
 }

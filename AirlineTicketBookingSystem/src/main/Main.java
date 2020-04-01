@@ -22,7 +22,7 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		
-		sql.initDatabase();
+		sql.initDatabase();  //关闭数据库在homepageController--toExit()
 		launch(args);
 
 	}

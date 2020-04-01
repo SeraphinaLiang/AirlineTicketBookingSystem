@@ -3,10 +3,12 @@ package screen;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
@@ -36,58 +38,48 @@ public class myBookingController implements Initializable {
     private TextField tfBookingNumber;
 
     @FXML
-    private MenuButton mbChangeClass;
-
-    @FXML
     private Button btComfirmSeat;
 
     @FXML
     private TextField tfPassportNumber;
 
     @FXML
-    private MenuButton mbSpecialMeal;
-
-    @FXML
-    private MenuButton mbBaggage;
-
-    @FXML
     private Button btDownloadForm;
 
     @FXML
     private Button btSearch;
+    
+    //-----------------------
+    @FXML
+    private ComboBox<String> cbBaggage;
+    @FXML
+    private ComboBox<String> cbChangeClass;
+    @FXML
+    private ComboBox<String> cbSpecialMeal;
+    
 //----------------------------------------
     private static String currentFlightNumber;
 
 //----------------------------------------------------------------------------------------------
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-       this.initMenuButton();
+       this.initComboBox();
     	
 	}
     
-    void initMenuButton() {
+    void initComboBox() {
     	//------------baggage allowance--------------
-    	MenuItem bag1 = new MenuItem("24KG--One piece");
-    	MenuItem bag2 = new MenuItem("48KG--Two pieces");
-    	this.mbBaggage.getItems().clear();
-    	this.mbBaggage.getItems().addAll(bag1,bag2);
+    	this.cbBaggage.getItems().clear();
+    	this.cbBaggage.getItems().addAll("24KG--One piece","48KG--Two pieces");
+
     	//-----------class-------------------------
-    	MenuItem EC = new MenuItem("Economy");
-    	MenuItem BC = new MenuItem("Business");
-    	MenuItem FC = new MenuItem("First-Class");
-    	this.mbChangeClass.getItems().clear();
-    	this.mbChangeClass.getItems().addAll(EC,BC,FC);
+    	this.cbChangeClass.getItems().clear();
+    	this.cbChangeClass.getItems().addAll("Economy","Business","First-Class");
+    
     	//---------------meal------------------------
-    	MenuItem meal7 = new MenuItem("No lactose");
-    	MenuItem meal1 = new MenuItem("Muslim");
-    	MenuItem meal2 = new MenuItem("Diabetic");
-    	MenuItem meal3 = new MenuItem("Low Sodium");
-    	MenuItem meal4 = new MenuItem("Vegetarian");
-    	MenuItem meal5 = new MenuItem("Kosher");
-    	
-    	this.mbSpecialMeal.getItems().clear();
-    	this.mbSpecialMeal.getItems().addAll(meal7,meal1,meal2,meal3,meal4,meal5);
-    	
+    	this.cbSpecialMeal.getItems().clear();
+    	this.cbSpecialMeal.getItems().addAll("No lactose","Muslim","Diabetic","Low Sodium","Vegetarian","Kosher");
+    
     }
     
     void refreshSeat() {
@@ -229,10 +221,12 @@ public class myBookingController implements Initializable {
     void searchMyBooking(ActionEvent event) {
 
     }
-
+//-----------------------menu button----------------------------------
     @FXML
     void changeClass(ActionEvent event) {
 
+    	String newClass=this.cbChangeClass.getSelectionModel().getSelectedItem();
+    	
     }
 
 
@@ -246,7 +240,7 @@ public class myBookingController implements Initializable {
     void selectSpecialMeal(ActionEvent event) {
 
     }
-
+//-----------------------menu button-----------------------------------
 
     @FXML
     void comfirmSeatSelection(ActionEvent event) {

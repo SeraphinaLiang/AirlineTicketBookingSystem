@@ -16,8 +16,10 @@ public class Flight {
 	private String planeType;
 	private String company;
 	
+	private boolean isCancel=false;
+	
 	public Flight(String number, String departureCity, String arrivalCity, String departureDay, String arrivalDay,
-			String departureTime, String arrivalTime, String planeType, String company) {
+			String departureTime, String arrivalTime, String planeType, String company,int cancel) {
 		super();
 		this.number = number;
 		this.departureCity = departureCity;
@@ -28,8 +30,19 @@ public class Flight {
 		this.arrivalTime = arrivalTime;
 		this.planeType = planeType;
 		this.company = company;
+		if(cancel==1) {
+			this.isCancel=true;
+		}
 	}
 	
+	public boolean isCancel() {
+		return isCancel;
+	}
+
+	public void setCancel(boolean isCancel) {
+		this.isCancel = isCancel;
+	}
+
 	public String getNumber() {
 		return number;
 	}
