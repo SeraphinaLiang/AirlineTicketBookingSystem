@@ -16,7 +16,7 @@ public class Flight {
 	private String planeType;
 	private String company;
 	
-	private boolean isCancel=false;
+	private boolean isCancel=false; // 1-cancel 0-available
 	
 	public Flight(String number, String departureCity, String arrivalCity, String departureDay, String arrivalDay,
 			String departureTime, String arrivalTime, String planeType, String company,int cancel) {

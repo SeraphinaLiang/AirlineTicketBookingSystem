@@ -3,7 +3,7 @@ package system;
 public class Passenger {
 	private String firstName;
 	private String lastName;
-	private int gender=0;
+	private int gender=0; //1 male 2 female
 	private String passportNumber;
 	private String expirationDate;
 	private String email;

@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import main.Main;
 
 public class Utility {
+	public static String currentTicketNo;
 	
 	//manager page 返回该航班乘客名单
 	public static ObservableList<String> getPassengersListWithFlight(){
