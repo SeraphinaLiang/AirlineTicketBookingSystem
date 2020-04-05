@@ -110,16 +110,16 @@ public class flightScheduleController implements Initializable {
 	}
 
 	// 根据舱位变动免费行李额
-void classListener() {
+	void classListener() {
 
 		this.cbClass.getSelectionModel().selectedItemProperty().addListener(o -> {
 			String selected = this.cbClass.getSelectionModel().getSelectedItem();
 			if (selected.equals("Business")) {
-				this.freeBaggage.setText("36KG");
+				this.freeBaggage.setText("36KG--Two Pieces");
 			} else if (selected.equals("First-Class")) {
-				this.freeBaggage.setText("48KG");
+				this.freeBaggage.setText("48KG--Two Pieces");
 			} else if (selected.equals("Economy")) {
-				this.freeBaggage.setText("24KG");
+				this.freeBaggage.setText("24KG--One Piece");
 			}
 		});
 	}
@@ -128,7 +128,7 @@ void classListener() {
 	void comfirmOrder(ActionEvent event) {
 
 		String flightNo = this.FlightNumber.getText();
-		
+
 		if (!this.tffirstName.getText().isEmpty()) {
 			if (!this.tffirstName.getText().isEmpty()) {
 				if (!this.tfPassport.getText().isEmpty()) {
@@ -136,7 +136,7 @@ void classListener() {
 						if (!this.birthday.getEditor().getText().isEmpty()) {
 							if (!this.expireDate.getEditor().getText().isEmpty()) {
 								if (!flightNo.contains("---")) {
-									
+
 									// 增加一名乘客
 									String firstName = this.tffirstName.getText();
 									String lastName = this.tfLastName.getText();
@@ -154,35 +154,35 @@ void classListener() {
 
 									Passenger pass = new Passenger(firstName, lastName, gender, passport, expirDate,
 											email, birthday);
-									
-									if(!Main.sql.alreadyAddPassenger(passport)) {
+
+									if (!Main.sql.alreadyAddPassenger(passport)) {
 										Main.sql.addPassenger(pass);
 									}
-									
-									//-------乘客book航班---------------
+
+									// -------乘客book航班---------------
 									Main.sql.passengerBookFlight(passport, flightNo);
-									//-------产生预定的ticket-----------------
-									String theclass=this.cbClass.getSelectionModel().getSelectedItem();
-									String baggage=this.freeBaggage.getText();
-									
-									if(this.cbClass.getSelectionModel().getSelectedItem()==null) {
-										theclass="Economy";
-										baggage="24KG";
+									// -------产生预定的ticket-----------------
+									String theclass = this.cbClass.getSelectionModel().getSelectedItem();
+									String baggage = this.freeBaggage.getText();
+
+									if (this.cbClass.getSelectionModel().getSelectedItem() == null) {
+										theclass = "Economy";
+										baggage = "24KG--One Piece";
 									}
-									
-									String ticketNo=new String();
-									int hash=Math.abs(passport.hashCode());
-									ticketNo=(hash+String.valueOf(getRandom())).substring(0,9);
-									
+
+									String ticketNo = new String();
+									int hash = Math.abs(flightNo.hashCode()*passport.hashCode());
+									ticketNo = (hash + String.valueOf(getRandom())).substring(0, 9);
+
 									Main.getSQLDemo().generateTicket(ticketNo, flightNo, passport, baggage, theclass);
-									
-									//----------弹窗-显示ticket预定编号---------------
-									Utility.currentTicketNo=ticketNo;
+
+									// ----------弹窗-显示ticket预定编号---------------
+									Utility.currentTicketNo = ticketNo;
 									try {
-										
+
 										Pane pane = FXMLLoader.load(getClass().getResource("bookTicketPopUp.fxml"));
 										Scene scene = new Scene(pane);
-										Stage s=new Stage();
+										Stage s = new Stage();
 										s.setScene(scene);
 										s.initStyle(StageStyle.UTILITY);
 										s.show();
@@ -202,13 +202,14 @@ void classListener() {
 	}
 
 	int getRandom() {
-		double j= System.currentTimeMillis();
-		double i=Math.random()*100;
-		return (int)(j*i);
+		double j = System.currentTimeMillis();
+        
+		double i = Math.random() * 100;
+		return (int) (j * i);
 	}
-	
+
 	@FXML
-	void searchFlight(ActionEvent event) {
+	void searchFlight(ActionEvent event) {//TODO
 
 		String departCity = null;
 		String desCity = null;

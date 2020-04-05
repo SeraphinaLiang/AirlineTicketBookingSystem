@@ -219,19 +219,19 @@
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
             </Label>
-            <Separator layoutY="383.0" opacity="0.31" prefHeight="7.0" prefWidth="280.0" />
-            <Label layoutX="14.0" layoutY="386.0" prefHeight="16.0" prefWidth="257.0" text="Please notice that all the blanks above must be filled." textFill="#223b6f" wrapText="true">
+            <Separator layoutX="3.0" layoutY="390.0" opacity="0.31" prefHeight="7.0" prefWidth="280.0" />
+            <Label layoutX="14.0" layoutY="393.0" prefHeight="16.0" prefWidth="257.0" text="Please notice that all the blanks above must be filled." textFill="#223b6f" wrapText="true">
                <font>
                   <Font name="Bookman Old Style Italic" size="10.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="402.0" prefHeight="27.0" prefWidth="257.0" text="Detail information of your flight is available at My Booking Page." textFill="#223b6f" wrapText="true">
+            <Label layoutX="14.0" layoutY="407.0" prefHeight="27.0" prefWidth="257.0" text="Detail information of your flight is available at My Booking Page." textFill="#223b6f" wrapText="true">
                <font>
                   <Font name="Bookman Old Style Italic" size="10.0" />
                </font>
             </Label>
-            <Separator layoutY="429.0" opacity="0.31" prefHeight="7.0" prefWidth="280.0" />
-            <Button fx:id="btconfirmOrder" layoutX="162.0" layoutY="436.0" mnemonicParsing="false" onAction="#comfirmOrder" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #87CEEB;" text="Comfirm Order" textFill="#14405e">
+            <Separator layoutY="432.0" opacity="0.31" prefHeight="7.0" prefWidth="280.0" />
+            <Button fx:id="btconfirmOrder" layoutX="162.0" layoutY="440.0" mnemonicParsing="false" onAction="#comfirmOrder" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #87CEEB;" text="Comfirm Order" textFill="#14405e">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -244,14 +244,14 @@
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="freeBaggage" layoutX="198.0" layoutY="355.0" text="---KG" textFill="#223b6f">
+            <Label fx:id="freeBaggage" layoutX="100.0" layoutY="373.0" text="---KG" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
             </Label>
             <ComboBox fx:id="cbClass" layoutX="65.0" layoutY="328.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="105.0" style="-fx-background-color: #87CEEB;" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="480.0" layoutX="-8.0" layoutY="-4.0" stroke="#5db3f545" strokeType="INSIDE" strokeWidth="5.0" width="295.0" />
          </children>
       </Pane>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="480.0" layoutX="464.0" layoutY="10.0" stroke="#5db3f545" strokeType="INSIDE" strokeWidth="5.0" width="295.0" />
    </children>
 </AnchorPane>

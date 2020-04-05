@@ -18,6 +18,10 @@ public class PopUpController implements Initializable{
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		showBookingNumber();
+	}
+	
+	void showBookingNumber() {
 		String mess="Your booking number is "+Utility.currentTicketNo+"."
 				+ "\nPlease note down your booking number, and move to MyBooking Page.";
 		message.setText(mess);

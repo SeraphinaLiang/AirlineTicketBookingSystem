@@ -56,7 +56,7 @@
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="93.0" layoutY="160.0" text="AL1009" textFill="#223b6f">
+            <Label fx:id="tflightNumber" layoutX="93.0" layoutY="160.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
@@ -66,7 +66,7 @@
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="183.0" layoutY="177.0" text="Paris/London" textFill="#223b6f">
+            <Label fx:id="tDepartArrival" layoutX="183.0" layoutY="177.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
@@ -81,12 +81,12 @@
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="137.0" layoutY="213.0" text="2018-05-20 10:25" textFill="#223b6f">
+            <Label fx:id="tArrivalTime" layoutX="137.0" layoutY="213.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="165.0" layoutY="195.0" text="2018-05-20 10:25" textFill="#223b6f">
+            <Label fx:id="tDepartTime" layoutX="165.0" layoutY="195.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
@@ -96,7 +96,7 @@
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="93.0" layoutY="230.0" text="Economy" textFill="#223b6f">
+            <Label fx:id="tClass" layoutX="93.0" layoutY="230.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
@@ -106,7 +106,7 @@
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="221.0" layoutY="245.0" text="24KG --One piece" textFill="#223b6f">
+            <Label fx:id="tFreebaggage" layoutX="221.0" layoutY="245.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
@@ -116,17 +116,17 @@
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="233.0" layoutY="160.0" prefHeight="16.0" prefWidth="111.0" text="Air France-KLM" textFill="#223b6f">
+            <Label fx:id="tcompany" layoutX="233.0" layoutY="160.0" prefHeight="16.0" prefWidth="111.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="354.0" layoutY="160.0" text="Type" textFill="#223b6f">
+            <Label layoutX="344.0" layoutY="160.0" text="Type" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="392.0" layoutY="160.0" prefHeight="16.0" prefWidth="50.0" text="B747" textFill="#223b6f">
+            <Label fx:id="tplaneType" layoutX="382.0" layoutY="160.0" prefHeight="16.0" prefWidth="50.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
@@ -146,12 +146,12 @@
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="145.0" layoutY="277.0" text="T1" textFill="#223b6f">
+            <Label fx:id="tTerminal1" layoutX="145.0" layoutY="277.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="145.0" layoutY="293.0" text="T2" textFill="#223b6f">
+            <Label fx:id="tTerminal2" layoutX="145.0" layoutY="293.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
@@ -161,7 +161,7 @@
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="128.0" layoutY="309.0" text="No" textFill="#223b6f">
+            <Label fx:id="tPayStatus" layoutX="128.0" layoutY="309.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
@@ -193,7 +193,7 @@
                   <Font name="Bookman Old Style Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="212.0" layoutY="230.0" text="9E" textFill="#223b6f">
+            <Label fx:id="tSeat" layoutX="212.0" layoutY="230.0" text="---" textFill="#223b6f">
                <font>
                   <Font name="Bookman Old Style Italic" size="14.0" />
                </font>
@@ -330,6 +330,16 @@
             <ComboBox fx:id="cbChangeClass" layoutX="156.0" layoutY="351.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#changeClass" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: #87CEEB;" />
             <ComboBox fx:id="cbBaggage" layoutX="259.0" layoutY="386.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#purchaseBaggageAllowance" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: #87CEEB;" />
             <ComboBox fx:id="cbSpecialMeal" layoutX="156.0" layoutY="420.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#selectSpecialMeal" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: #87CEEB;" />
+            <Label layoutX="178.0" layoutY="261.0" text="Flight Status" textFill="#9e4a4a">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tFlightStatus" layoutX="217.0" layoutY="277.0" text="---" textFill="#9e4a4a">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="14.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

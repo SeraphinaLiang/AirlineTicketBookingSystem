@@ -16,6 +16,9 @@ public class Flight {
 	private String planeType;
 	private String company;
 	
+	private String T1;
+	private String T2;
+	
 	private boolean isCancel=false; // 1-cancel 0-available
 	
 	public Flight(String number, String departureCity, String arrivalCity, String departureDay, String arrivalDay,
@@ -35,6 +38,22 @@ public class Flight {
 		}
 	}
 	
+	public String getT1() {
+		return T1;
+	}
+
+	public String getT2() {
+		return T2;
+	}
+
+	public void setT1(String t1) {
+		T1 = t1;
+	}
+
+	public void setT2(String t2) {
+		T2 = t2;
+	}
+
 	public boolean isCancel() {
 		return isCancel;
 	}
