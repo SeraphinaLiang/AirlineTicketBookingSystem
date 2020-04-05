@@ -439,6 +439,11 @@ public class SQLDemo {
 	}
 //--------------------------MY BOOKING-------------------------------------------------------------
 
+	//乘客取消航班预定
+	public void cancelBooking(String ticketNo) {//TODO
+		
+	}
+	
 	//乘客付款
 	public void payBill(String billNo) {
 		String sql;

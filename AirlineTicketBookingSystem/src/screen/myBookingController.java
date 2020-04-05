@@ -659,6 +659,30 @@ public class myBookingController implements Initializable {
 
 	@FXML
 	void cancelFlight(ActionEvent event) {
+		
+		Main.sql.cancelBooking(currentTicketNumber);
+		
+		try {
+			
+			//---------返回主页-------------
+			Pane home = FXMLLoader.load(getClass().getResource("homepage.fxml"));
+			Scene scenehome = new Scene(home);
+			Stage ss=Main.getPrimaryStage();
+			ss.setScene(scenehome);
+			//---------弹窗------------
+			Pane pane = FXMLLoader.load(getClass().getResource("PopUpCancelBooking.fxml"));
+			Scene scene = new Scene(pane);
+			Stage s = new Stage();
+			s.setScene(scene);
+			s.initStyle(StageStyle.UTILITY);
+			s.setTitle("Notice");
+			s.show();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 
 	}
 
