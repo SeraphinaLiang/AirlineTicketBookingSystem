@@ -183,31 +183,31 @@ public class managePageController implements Initializable {
 		this.lvAllFlight.getSelectionModel().selectedItemProperty().addListener(o -> {
 			FlightCell cell = this.lvAllFlight.getSelectionModel().getSelectedItem();
 
-			if(cell!=null) {
-				String number=cell.getFlightNumber();
-			this.initPassengerListview(number);
-			
-			int FC=Main.sql.getSeatBookingNumber(number,"FIRST-CLASS");
-			int BC=Main.sql.getSeatBookingNumber(number,"BUSINESS");
-			int EC=Main.sql.getSeatBookingNumber(number,"ECONOMY");
-			
-			double FRate=(((double)FC)/35)*100;
-			double BRate=(((double)BC)/35)*100;
-			double ERate=(((double)EC)/35)*100;
-			double totalRate=(((double)(FC+BC+EC))/105)*100;
-			
-			
-			this.firstclassRate.setText(String.format("%.2f", FRate)+" %");
-			this.businessRate.setText(String.format("%.2f", BRate)+" %");
-			this.economyRate.setText(String.format("%.2f", ERate)+" %");
-			this.totalRate.setText(String.format("%.2f", totalRate)+" %");
-			
+			if (cell != null) {
+				String number = cell.getFlightNumber();
+				this.initPassengerListview(number);
+
+				int FC = Main.sql.getSeatBookingNumber(number, "FIRST-CLASS");
+				int BC = Main.sql.getSeatBookingNumber(number, "BUSINESS");
+				int EC = Main.sql.getSeatBookingNumber(number, "ECONOMY");
+
+				double FRate = (((double) FC) / 35) * 100;
+				double BRate = (((double) BC) / 35) * 100;
+				double ERate = (((double) EC) / 35) * 100;
+				double totalRate = (((double) (FC + BC + EC)) / 105) * 100;
+
+				this.firstclassRate.setText(String.format("%.2f", FRate) + " %");
+				this.businessRate.setText(String.format("%.2f", BRate) + " %");
+				this.economyRate.setText(String.format("%.2f", ERate) + " %");
+				this.totalRate.setText(String.format("%.2f", totalRate) + " %");
+
 			}
 		});
 
 	}
+
 	void initPassengerListview(String number) {
-		ArrayList<String> list=Main.sql.getPassengerListofTheFlight(number);
+		ArrayList<String> list = Main.sql.getPassengerListofTheFlight(number);
 		ObservableList<String> pass = FXCollections.observableArrayList(list);
 		this.lvPassenger.setItems(pass);
 	}

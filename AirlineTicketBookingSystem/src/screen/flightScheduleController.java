@@ -230,7 +230,7 @@ public class flightScheduleController implements Initializable {
 			}
 		}
 	}
-	
+
 	void refreshFlightCell(ArrayList<Flight> flights) {
 
 		this.flightInfo.setCellFactory(new Callback<ListView<FlightCell>, ListCell<FlightCell>>() {

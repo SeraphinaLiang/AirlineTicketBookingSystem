@@ -954,15 +954,14 @@ public class SQLDemo {
 		try {
 			String sql;
 			sql = "SELECT flight_number,departure_city,arrival_city,departure_day,arrival_day,"
-					+ "departure_time,arrival_time,plane_type,company,isCancel" 
-					+ " FROM flight "
+					+ "departure_time,arrival_time,plane_type,company,isCancel" + " FROM flight "
 					+ "WHERE departure_city= ? and arrival_city = ? ";
-			
+
 			ResultSet rs;
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, de);
 			ps.setString(2, ar);
-			
+
 			rs = ps.executeQuery();
 
 			// 展开结果集数据库
@@ -998,24 +997,23 @@ public class SQLDemo {
 		}
 		return flights;
 	}
-    
-	//查询航班 往返
+
+	// 查询航班 往返
 	public ArrayList<Flight> getFlightsReturnTrip(String de, String ar) {
 		ArrayList<Flight> flights = new ArrayList<>();
 		PreparedStatement ps = null;
-		
+
 		try {
 			String sql1;
 			sql1 = "SELECT flight_number,departure_city,arrival_city,departure_day,arrival_day,"
-					+ "departure_time,arrival_time,plane_type,company,isCancel" 
-					+ " FROM flight "
+					+ "departure_time,arrival_time,plane_type,company,isCancel" + " FROM flight "
 					+ "WHERE departure_city= ? and arrival_city = ? ";
-			
+
 			ResultSet rs;
 			ps = conn.prepareStatement(sql1);
 			ps.setString(1, de);
 			ps.setString(2, ar);
-			
+
 			rs = ps.executeQuery();
 
 			// 展开结果集数据库
@@ -1043,20 +1041,18 @@ public class SQLDemo {
 						departureTime, arrivalTime, plane_type, company, cancel);
 				flights.add(f);
 			}
-				
-			//-------------------------------------------------------------------
-			
-			
+
+			// -------------------------------------------------------------------
+
 			String sql2;
 			sql2 = "SELECT flight_number,departure_city,arrival_city,departure_day,arrival_day,"
-					+ "departure_time,arrival_time,plane_type,company,isCancel" 
-					+ " FROM flight "
+					+ "departure_time,arrival_time,plane_type,company,isCancel" + " FROM flight "
 					+ "WHERE departure_city= ? and arrival_city = ? ";
-			
+
 			ps = conn.prepareStatement(sql2);
 			ps.setString(1, ar);
 			ps.setString(2, de);
-			
+
 			rs = ps.executeQuery();
 
 			// 展开结果集数据库
@@ -1084,7 +1080,7 @@ public class SQLDemo {
 						departureTime, arrivalTime, plane_type, company, cancel);
 				flights.add(f);
 			}
-			
+
 			rs.close();
 			ps.close();
 		} catch (SQLException e) {

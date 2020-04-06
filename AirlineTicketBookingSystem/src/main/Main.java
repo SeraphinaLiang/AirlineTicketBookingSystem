@@ -16,13 +16,13 @@ public class Main extends Application {
 
 	public static Stage stage = new Stage();
 	public static SQLDemo sql = new SQLDemo();
-	
-	public static String managerAccount="airline";
-	public static String managerPassword="00000000";
-	
+
+	public static String managerAccount = "airline";
+	public static String managerPassword = "00000000";
+
 	public static void main(String[] args) {
-		
-		sql.initDatabase();  //关闭数据库在homepageController--toExit()
+
+		sql.initDatabase(); // 关闭数据库在homepageController--toExit()
 		launch(args);
 
 	}
@@ -38,7 +38,7 @@ public class Main extends Application {
 		stage.setScene(mainScene);
 		stage.show();
 	}
-	
+
 	public static Stage getPrimaryStage() {
 		return stage;
 	}

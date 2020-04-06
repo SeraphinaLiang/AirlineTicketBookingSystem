@@ -24,10 +24,9 @@ public class managerLoginController {
 	@FXML
 	private PasswordField tfPassword;
 
-
 	@FXML
 	public void managerLogin(ActionEvent event) {
-	
+
 		String account = null, key = null;
 
 		if (!this.tfAccount.getText().isEmpty()) {
@@ -38,7 +37,7 @@ public class managerLoginController {
 		}
 		if ((account != null) && (key != null)) {
 			if (account.equals(main.Main.managerAccount) && key.equals(main.Main.managerPassword)) {
-				  
+
 				try {
 					Pane pane = FXMLLoader.load(getClass().getResource("managePage.fxml"));
 					this.basic.getChildren().setAll(pane);

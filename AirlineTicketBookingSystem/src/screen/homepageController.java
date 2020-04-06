@@ -32,7 +32,6 @@ public class homepageController implements Initializable {
 
 	@FXML
 	private Button btManager;
-	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -79,16 +78,15 @@ public class homepageController implements Initializable {
 		this.btBooking.setStyle("-fx-background-color: #87CEEB;");
 		this.btManager.setStyle("-fx-background-color: #C0C0C0;");
 		// 进入界面
-				try {
-					Pane pane = FXMLLoader.load(getClass().getResource("managerLogin.fxml"));
-					this.homePane.getChildren().setAll(pane);
+		try {
+			Pane pane = FXMLLoader.load(getClass().getResource("managerLogin.fxml"));
+			this.homePane.getChildren().setAll(pane);
 
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	
 
 	@FXML
 	void toExit(ActionEvent event) {
