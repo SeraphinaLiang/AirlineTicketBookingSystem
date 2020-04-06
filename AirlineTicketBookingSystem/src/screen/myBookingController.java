@@ -39,8 +39,8 @@ public class myBookingController implements Initializable {
 	private Rectangle D1, D2, D3, D4, D5, D6, D7, E1, E2, E3, E4, E5, E6, E7;
 	// -------------------------------------------------------------------------------
 
-    @FXML
-    private Button btpay;
+	@FXML
+	private Button btpay;
 	@FXML
 	private Button btBill;
 
@@ -109,164 +109,199 @@ public class myBookingController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.initComboBox();
 		seatSelectionListener();
-		
+
 		this.btComfirmSeat.setDisable(true);
 		this.btDownloadForm.setDisable(true);
 		this.btpay.setDisable(true);
 		this.btBill.setDisable(true);
 		this.btcancel.setDisable(true);
-		
+
 	}
 
 	void seatSelectionListener() {
 
 		A1.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass); currentSeat="A1";
+			refreshSeat(currentTheClass);
+			currentSeat = "A1";
 			this.A1.setStyle("-fx-fill:#ebd759");
 		});
 
 		A2.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="A2";
+			refreshSeat(currentTheClass);
+			currentSeat = "A2";
 			this.A2.setStyle("-fx-fill:#ebd759");
 		});
 		A3.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="A3";
+			refreshSeat(currentTheClass);
+			currentSeat = "A3";
 			this.A3.setStyle("-fx-fill:#ebd759");
 		});
 		A4.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="A4";
+			refreshSeat(currentTheClass);
+			currentSeat = "A4";
 			this.A4.setStyle("-fx-fill:#ebd759");
 		});
 		A5.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="A5";
+			refreshSeat(currentTheClass);
+			currentSeat = "A5";
 			this.A5.setStyle("-fx-fill:#ebd759");
 		});
 		A6.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="A6";
+			refreshSeat(currentTheClass);
+			currentSeat = "A6";
 			this.A6.setStyle("-fx-fill:#ebd759");
 		});
 		A7.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="A7";
+			refreshSeat(currentTheClass);
+			currentSeat = "A7";
 			this.A7.setStyle("-fx-fill:#ebd759");
 		});
-		//--------------------------------------
+		// --------------------------------------
 		B1.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass); currentSeat="B1";
+			refreshSeat(currentTheClass);
+			currentSeat = "B1";
 			this.B1.setStyle("-fx-fill:#ebd759");
 		});
 
 		B2.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="B2";
+			refreshSeat(currentTheClass);
+			currentSeat = "B2";
 			this.B2.setStyle("-fx-fill:#ebd759");
 		});
 		B3.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="B3";
+			refreshSeat(currentTheClass);
+			currentSeat = "B3";
 			this.B3.setStyle("-fx-fill:#ebd759");
 		});
 		B4.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="B4";
+			refreshSeat(currentTheClass);
+			currentSeat = "B4";
 			this.B4.setStyle("-fx-fill:#ebd759");
 		});
 		B5.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="B5";
+			refreshSeat(currentTheClass);
+			currentSeat = "B5";
 			this.B5.setStyle("-fx-fill:#ebd759");
 		});
 		B6.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="B6";
+			refreshSeat(currentTheClass);
+			currentSeat = "B6";
 			this.B6.setStyle("-fx-fill:#ebd759");
 		});
 		B7.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="B7";
+			refreshSeat(currentTheClass);
+			currentSeat = "B7";
 			this.B7.setStyle("-fx-fill:#ebd759");
 		});
-		//-------------------------------
+		// -------------------------------
 		C1.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass); currentSeat="C1";
+			refreshSeat(currentTheClass);
+			currentSeat = "C1";
 			this.C1.setStyle("-fx-fill:#ebd759");
 		});
 
 		C2.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="C2";
+			refreshSeat(currentTheClass);
+			currentSeat = "C2";
 			this.C2.setStyle("-fx-fill:#ebd759");
 		});
 		C3.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="C3";
+			refreshSeat(currentTheClass);
+			currentSeat = "C3";
 			this.C3.setStyle("-fx-fill:#ebd759");
 		});
 		C4.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="C4";
+			refreshSeat(currentTheClass);
+			currentSeat = "C4";
 			this.C4.setStyle("-fx-fill:#ebd759");
 		});
 		C5.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="C5";
+			refreshSeat(currentTheClass);
+			currentSeat = "C5";
 			this.C5.setStyle("-fx-fill:#ebd759");
 		});
 		C6.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="C6";
+			refreshSeat(currentTheClass);
+			currentSeat = "C6";
 			this.C6.setStyle("-fx-fill:#ebd759");
 		});
 		C7.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="C7";
+			refreshSeat(currentTheClass);
+			currentSeat = "C7";
 			this.C7.setStyle("-fx-fill:#ebd759");
 		});
-		//-----------------------------------
+		// -----------------------------------
 		D1.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass); currentSeat="D1";
+			refreshSeat(currentTheClass);
+			currentSeat = "D1";
 			this.D1.setStyle("-fx-fill:#ebd759");
 		});
 
 		D2.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="D2";
+			refreshSeat(currentTheClass);
+			currentSeat = "D2";
 			this.D2.setStyle("-fx-fill:#ebd759");
 		});
 		D3.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="D3";
+			refreshSeat(currentTheClass);
+			currentSeat = "D3";
 			this.D3.setStyle("-fx-fill:#ebd759");
 		});
 		D4.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="D4";
+			refreshSeat(currentTheClass);
+			currentSeat = "D4";
 			this.D4.setStyle("-fx-fill:#ebd759");
 		});
 		D5.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="D5";
+			refreshSeat(currentTheClass);
+			currentSeat = "D5";
 			this.D5.setStyle("-fx-fill:#ebd759");
 		});
 		D6.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="D6";
+			refreshSeat(currentTheClass);
+			currentSeat = "D6";
 			this.D6.setStyle("-fx-fill:#ebd759");
 		});
 		D7.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="D7";
+			refreshSeat(currentTheClass);
+			currentSeat = "D7";
 			this.D7.setStyle("-fx-fill:#ebd759");
 		});
-		//------------------------------
+		// ------------------------------
 		E1.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass); currentSeat="E1";
+			refreshSeat(currentTheClass);
+			currentSeat = "E1";
 			this.E1.setStyle("-fx-fill:#ebd759");
 		});
 
 		E2.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="E2";
+			refreshSeat(currentTheClass);
+			currentSeat = "E2";
 			this.E2.setStyle("-fx-fill:#ebd759");
 		});
 		E3.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="E3";
+			refreshSeat(currentTheClass);
+			currentSeat = "E3";
 			this.E3.setStyle("-fx-fill:#ebd759");
 		});
 		E4.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="E4";
+			refreshSeat(currentTheClass);
+			currentSeat = "E4";
 			this.E4.setStyle("-fx-fill:#ebd759");
 		});
 		E5.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="E5";
+			refreshSeat(currentTheClass);
+			currentSeat = "E5";
 			this.E5.setStyle("-fx-fill:#ebd759");
 		});
 		E6.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="E6";
+			refreshSeat(currentTheClass);
+			currentSeat = "E6";
 			this.E6.setStyle("-fx-fill:#ebd759");
 		});
 		E7.setOnMouseClicked(o1 -> {
-			refreshSeat(currentTheClass);currentSeat="E7";
+			refreshSeat(currentTheClass);
+			currentSeat = "E7";
 			this.E7.setStyle("-fx-fill:#ebd759");
 		});
 
@@ -289,214 +324,214 @@ public class myBookingController implements Initializable {
 
 	void refreshSeat(String theClass) {
 		// -------------A-----------------
-		if (!Main.getSQLDemo().getSeatAvailableState("A1", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("A1", currentFlightNumber, theClass)) {
 			this.A1.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.A1.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("A2", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("A2", currentFlightNumber, theClass)) {
 			this.A2.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.A2.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("A3", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("A3", currentFlightNumber, theClass)) {
 			this.A3.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.A3.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("A4", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("A4", currentFlightNumber, theClass)) {
 			this.A4.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.A4.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("A5", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("A5", currentFlightNumber, theClass)) {
 			this.A5.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.A5.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("A6", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("A6", currentFlightNumber, theClass)) {
 			this.A6.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.A6.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("A7", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("A7", currentFlightNumber, theClass)) {
 			this.A7.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.A7.setStyle("-fx-fill:#56afeb");
 		}
 
 		// -----------B-----------------------------
-		if (!Main.getSQLDemo().getSeatAvailableState("B1", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("B1", currentFlightNumber, theClass)) {
 			this.B1.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.B1.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("B2", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("B2", currentFlightNumber, theClass)) {
 			this.B2.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.B2.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("B3", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("B3", currentFlightNumber, theClass)) {
 			this.B3.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.B3.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("B4", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("B4", currentFlightNumber, theClass)) {
 			this.B4.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.B4.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("B5", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("B5", currentFlightNumber, theClass)) {
 			this.B5.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.B5.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("B6", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("B6", currentFlightNumber, theClass)) {
 			this.B6.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.B6.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("B7", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("B7", currentFlightNumber, theClass)) {
 			this.B7.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.B7.setStyle("-fx-fill:#56afeb");
 		}
 
 		// --------C---------------------
-		if (!Main.getSQLDemo().getSeatAvailableState("C1", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("C1", currentFlightNumber, theClass)) {
 			this.C1.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.C1.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("C2", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("C2", currentFlightNumber, theClass)) {
 			this.C2.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.C2.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("C3", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("C3", currentFlightNumber, theClass)) {
 			this.C3.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.C3.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("C4", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("C4", currentFlightNumber, theClass)) {
 			this.C4.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.C4.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("C5", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("C5", currentFlightNumber, theClass)) {
 			this.C5.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.C5.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("C6", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("C6", currentFlightNumber, theClass)) {
 			this.C6.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.C6.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("C7", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("C7", currentFlightNumber, theClass)) {
 			this.C7.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.C7.setStyle("-fx-fill:#56afeb");
 		}
 
 		// --------------D-----------------------
-		if (!Main.getSQLDemo().getSeatAvailableState("D1", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("D1", currentFlightNumber, theClass)) {
 			this.D1.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.D1.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("D2", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("D2", currentFlightNumber, theClass)) {
 			this.D2.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.D2.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("D3", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("D3", currentFlightNumber, theClass)) {
 			this.D3.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.D3.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("D4", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("D4", currentFlightNumber, theClass)) {
 			this.D4.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.D4.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("D5", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("D5", currentFlightNumber, theClass)) {
 			this.D5.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.D5.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("D6", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("D6", currentFlightNumber, theClass)) {
 			this.D6.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.D6.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("D7", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("D7", currentFlightNumber, theClass)) {
 			this.D7.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.D7.setStyle("-fx-fill:#56afeb");
 		}
 		// -------------------E---------------------
-		if (!Main.getSQLDemo().getSeatAvailableState("E1", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("E1", currentFlightNumber, theClass)) {
 			this.E1.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.E1.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("E2", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("E2", currentFlightNumber, theClass)) {
 			this.E2.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.E2.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("E3", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("E3", currentFlightNumber, theClass)) {
 			this.E3.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.E3.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("E4", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("E4", currentFlightNumber, theClass)) {
 			this.E4.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.E4.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("E5", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("E5", currentFlightNumber, theClass)) {
 			this.E5.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.E5.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("E6", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("E6", currentFlightNumber, theClass)) {
 			this.E6.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.E6.setStyle("-fx-fill:#56afeb");
 		}
 
-		if (!Main.getSQLDemo().getSeatAvailableState("E7", currentFlightNumber,theClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState("E7", currentFlightNumber, theClass)) {
 			this.E7.setStyle("-fx-fill:#eb5757");
 		} else {
 			this.E7.setStyle("-fx-fill:#56afeb");
@@ -516,7 +551,7 @@ public class myBookingController implements Initializable {
 					// 根据ticketNo 得到 航班号
 					String flightNo = Main.sql.getFlightNoFromBookingNo(ticketNo);
 					Flight f = Main.sql.getFlightPickByCustomer(flightNo);
-					currentFlightNumber=flightNo;
+					currentFlightNumber = flightNo;
 
 					// 更新界面--航班信息
 					this.tflightNumber.setText(f.getNumber());
@@ -537,32 +572,52 @@ public class myBookingController implements Initializable {
 					Ticket t = Main.sql.getTicketFromTicketNo(ticketNo);
 					this.tFreebaggage.setText(t.getBaggageAllowance());
 					this.tClass.setText(t.getTheClass());
-					
-					currentPassportNumber=passport;
-					currentTheClass=t.getTheClass();
-					
-					// ----seat----				
-					String seat=Main.sql.getSeatifAlreadyChoose(flightNo,passport);
-					
-					if(!seat.equals("NO")) {
+
+					currentPassportNumber = passport;
+					currentTheClass = t.getTheClass();
+
+					// ----seat----
+					String seat = Main.sql.getSeatifAlreadyChoose(flightNo, passport);
+
+					if (!seat.equals("NO")) {
 						this.btComfirmSeat.setDisable(true);
 						this.tSeat.setText(seat);
-						currentSeat=seat;
-					}else {
+						currentSeat = seat;
+					} else {
 						this.btComfirmSeat.setDisable(false);
 					}
-					
+
 					// ---pay status---
-					if(Main.sql.ifpaid(currentTicketNumber)) {
+					if (Main.sql.ifpaid(currentTicketNumber)) {
 						this.tPayStatus.setText("Yes");
 						this.btpay.setDisable(true);
 						this.btDownloadForm.setDisable(false);
-					}else {
+					} else {
 						this.btpay.setDisable(false);
 						this.btDownloadForm.setDisable(true);
 					}
 					this.btBill.setDisable(false);
 					this.btcancel.setDisable(false);
+
+					// ---generate fee
+
+					if (!t.generate) {
+						int i = (int) (Math.random() * 100 + Math.random() * 100
+								+ Math.abs(currentFlightNumber.hashCode()));
+						String taxS = String.valueOf(Math.abs(i)).substring(0, 2);
+						int tax = Integer.parseInt(taxS);
+						t.tax = taxS;
+
+						int j = (int) (200 + Math.abs(currentPassportNumber.hashCode())
+								+ Math.abs(currentFlightNumber.hashCode()));
+						String fareS = String.valueOf(Math.abs(j)).substring(0, 3);
+						int fare = Integer.parseInt(fareS);
+						t.fare = fareS;
+
+						int total = tax + fare;
+						t.total = String.valueOf(total);
+						t.generate = true;
+					}
 
 				} else {
 					// pop up 预定编号或护照号码错误
@@ -594,7 +649,7 @@ public class myBookingController implements Initializable {
 		String newClass = this.cbChangeClass.getSelectionModel().getSelectedItem();
 		Main.sql.changeClass(currentTicketNumber, newClass);
 		this.tClass.setText(newClass);
-		currentTheClass=newClass;
+		currentTheClass = newClass;
 
 		// change baggage allowance
 		if (newClass.equals("First-Class")) {
@@ -626,7 +681,7 @@ public class myBookingController implements Initializable {
 
 	@FXML
 	void comfirmSeatSelection(ActionEvent event) {
-		if (!Main.getSQLDemo().getSeatAvailableState(currentSeat, currentFlightNumber,currentTheClass)) {
+		if (!Main.getSQLDemo().getSeatAvailableState(currentSeat, currentFlightNumber, currentTheClass)) {
 			try {
 
 				Pane pane = FXMLLoader.load(getClass().getResource("PopUpSeatUnavailable.fxml"));
@@ -641,10 +696,11 @@ public class myBookingController implements Initializable {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}else {
+		} else {
 			this.tSeat.setText(currentSeat);
-			Main.sql.chooseSeat(currentSeat, currentFlightNumber,currentTheClass, currentPassportNumber);
+			Main.sql.chooseSeat(currentSeat, currentFlightNumber, currentTheClass, currentPassportNumber);
 			this.btComfirmSeat.setDisable(true);
+			this.cbChangeClass.setDisable(true);
 		}
 
 	}
@@ -655,21 +711,22 @@ public class myBookingController implements Initializable {
 		this.btpay.setDisable(true);
 		Main.sql.payBill(currentTicketNumber);
 		this.btDownloadForm.setDisable(false);
+
 	}
 
 	@FXML
 	void cancelFlight(ActionEvent event) {
-		
-		Main.sql.cancelBooking(currentTicketNumber);
-		
+
+		Main.sql.cancelBooking(currentTicketNumber, currentPassportNumber, currentFlightNumber);
+
 		try {
-			
-			//---------返回主页-------------
+
+			// ---------返回主页-------------
 			Pane home = FXMLLoader.load(getClass().getResource("homepage.fxml"));
 			Scene scenehome = new Scene(home);
-			Stage ss=Main.getPrimaryStage();
+			Stage ss = Main.getPrimaryStage();
 			ss.setScene(scenehome);
-			//---------弹窗------------
+			// ---------弹窗------------
 			Pane pane = FXMLLoader.load(getClass().getResource("PopUpCancelBooking.fxml"));
 			Scene scene = new Scene(pane);
 			Stage s = new Stage();
@@ -677,12 +734,11 @@ public class myBookingController implements Initializable {
 			s.initStyle(StageStyle.UTILITY);
 			s.setTitle("Notice");
 			s.show();
-			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 
 	}
 
@@ -693,7 +749,7 @@ public class myBookingController implements Initializable {
 		File directory = directoryChooser.showDialog(Main.getPrimaryStage());
 		if (directory != null) {
 			String filePath = directory + "/ticket_collection_form.pdf";
-			DownloadFile.collectForm(filePath);
+			DownloadFile.collectForm(filePath, currentPassportNumber, currentFlightNumber, currentTicketNumber);
 		}
 	}
 
@@ -704,7 +760,7 @@ public class myBookingController implements Initializable {
 		File directory = directoryChooser.showDialog(Main.getPrimaryStage());
 		if (directory != null) {
 			String filePath = directory + "/bill.pdf";
-			DownloadFile.bill(filePath);
+			DownloadFile.bill(filePath, currentPassportNumber, currentFlightNumber, currentTicketNumber);
 		}
 	}
 }

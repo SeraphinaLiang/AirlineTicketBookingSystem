@@ -138,8 +138,8 @@ public class flightScheduleController implements Initializable {
 								if (!flightNo.contains("---")) {
 
 									// 增加一名乘客
-									String firstName = this.tffirstName.getText();
-									String lastName = this.tfLastName.getText();
+									String firstName = this.tffirstName.getText().toUpperCase();
+									String lastName = this.tfLastName.getText().toUpperCase();
 									String passport = this.tfPassport.getText();
 									String email = this.tfemail.getText();
 									String birthday = this.birthday.getEditor().getText().replace('/', '-');

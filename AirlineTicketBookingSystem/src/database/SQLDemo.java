@@ -439,22 +439,65 @@ public class SQLDemo {
 	}
 //--------------------------MY BOOKING-------------------------------------------------------------
 
-	//乘客取消航班预定
-	public void cancelBooking(String ticketNo) {//TODO
-		
+	// 乘客取消航班预定
+	public void cancelBooking(String ticketNo, String passportNo, String flightNo) {// TODO
+		/**
+		 * 1. reset seat,use passportNo and flightNo to local the seat ,if the passenger
+		 * has booked a seat 2. use ticketNo to get passportNo and flightNo to delete
+		 * book 3. delete ticket---bill will be deleted together 4. **can not delete
+		 * passenger because they may book other flight**
+		 */
+
+		PreparedStatement ps = null;
+		// ---------------------reset seat-------------------------------
+
+		try {
+			String sql1 = "update seat " + "set isbooked = 0 , passport_number = NULL "
+					+ "where flight_number= ? and passport_number = ? ;";
+			ps = conn.prepareStatement(sql1);
+			ps.setString(1, flightNo);
+			ps.setString(2, passportNo);
+			ps.executeUpdate();
+			ps.close();
+
+			// -----------delete book----------
+			String sql2 = "delete from book " + "where flight_number= ? and passport_number = ? ;";
+			ps = conn.prepareStatement(sql2);
+			ps.setString(1, flightNo);
+			ps.setString(2, passportNo);
+			ps.executeUpdate();
+			ps.close();
+
+			// ------------delete ticket-------------------
+			String sql3 = "delete from ticket " + "where ticket_number = ? ;";
+			ps = conn.prepareStatement(sql3);
+			ps.setString(1, ticketNo);
+			ps.executeUpdate();
+			ps.close();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (null != ps) {
+				try {
+					ps.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
 	}
-	
-	//乘客付款
+
+	// 乘客付款
 	public void payBill(String billNo) {
 		String sql;
 		PreparedStatement ps = null;
-		sql = "update bill "
-				+ "set ispaid = 1 , pay_date = current_date() "
-				+ "where bill_number= ? ";
+		sql = "update bill " + "set ispaid = 1 , pay_date = current_date() " + "where bill_number= ? ";
 		try {
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, billNo);
-		
+
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -468,23 +511,23 @@ public class SQLDemo {
 			}
 		}
 	}
-	
-	//乘客是否已经付款
+
+	// 乘客是否已经付款
 	public boolean ifpaid(String billNo) {
-		boolean paid=false;
-		
+		boolean paid = false;
+
 		CallableStatement callableStatement = null;
 		try {
 			callableStatement = conn.prepareCall("{?=call if_paid(?)}");
-			
+
 			callableStatement.registerOutParameter(1, Types.INTEGER);
-			callableStatement.setString(2,billNo);
+			callableStatement.setString(2, billNo);
 			callableStatement.execute();
-			
-			int i=callableStatement.getInt(1);
-			
-			if(i==1) {
-				paid=true;
+
+			int i = callableStatement.getInt(1);
+
+			if (i == 1) {
+				paid = true;
 				return true;
 			}
 
@@ -499,25 +542,25 @@ public class SQLDemo {
 				e.printStackTrace();
 			}
 		}
-		
+
 		return paid;
 	}
-	
-	//获得乘客已经选中的座位 若返回‘NO’则未选中
-	public String getSeatifAlreadyChoose(String flightNo,String pass) {
-		String seat=null;
-		
+
+	// 获得乘客已经选中的座位 若返回‘NO’则未选中
+	public String getSeatifAlreadyChoose(String flightNo, String pass) {
+		String seat = null;
+
 		CallableStatement callableStatement = null;
 		try {
 			callableStatement = conn.prepareCall("{?=call get_seat_if_booked(?,?)}");
-			
+
 			callableStatement.registerOutParameter(1, Types.VARCHAR);
-			
+
 			callableStatement.setString(2, flightNo);
 			callableStatement.setString(3, pass);
 			callableStatement.execute();
-			
-			seat=callableStatement.getString(1);
+
+			seat = callableStatement.getString(1);
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -530,16 +573,15 @@ public class SQLDemo {
 				e.printStackTrace();
 			}
 		}
-		
+
 		return seat;
 	}
-	
-	//customer choose a seat
-	public void chooseSeat(String pos,String flightNo,String theClass,String passport) {
+
+	// customer choose a seat
+	public void chooseSeat(String pos, String flightNo, String theClass, String passport) {
 		String sql;
 		PreparedStatement ps = null;
-		sql = "update seat "
-				+ "set isbooked = 1 , passport_number = ? "
+		sql = "update seat " + "set isbooked = 1 , passport_number = ? "
 				+ "where flight_number= ? and position = ? and class= ? ";
 		try {
 			ps = conn.prepareStatement(sql);
@@ -560,7 +602,7 @@ public class SQLDemo {
 				}
 			}
 		}
-		
+
 	}
 
 	// 增加额外行李额
@@ -669,8 +711,10 @@ public class SQLDemo {
 				String baggage = rs.getString("baggage_allowance");
 				String meal = rs.getString("special_meal");
 				String theclass = rs.getString("class");
+				String add=rs.getString("baggage_add");
 
 				t = new Ticket(ticketNo, passport, flight, baggage, meal, theclass);
+				t.setBaggageAdd(add);
 			}
 
 		} catch (Exception e) {
@@ -695,13 +739,12 @@ public class SQLDemo {
 	}
 
 	// 返回这个座位是否已经被预定
-	public boolean getSeatAvailableState(String position, String flightNumber,String theClass) {
+	public boolean getSeatAvailableState(String position, String flightNumber, String theClass) {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		boolean isAvailable = true;
 		try {
-			String sql = "select isbooked "
-					+ "from seat "
+			String sql = "select isbooked " + "from seat "
 					+ "where position = ? and flight_number = ? and  class = ? ;";
 			ps = conn.prepareStatement(sql);
 
@@ -813,6 +856,52 @@ public class SQLDemo {
 	}
 
 //-----------------------------------------------------------------------------------------------
+	
+	public Passenger getPassengerFromPassportNo(String pass) {
+		Passenger p = null;
+		
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		try {
+			String sql = "select * " + " from passenger " + " where passport_number = ? ;";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, pass);
+			rs = ps.executeQuery();
+
+			while (rs.next()) {
+				String fn=rs.getString("firstname");
+				String ln=rs.getString("lastname");
+				int gender=rs.getInt("gender");
+				String expiration_date=rs.getDate("expiration_date").toString();
+				String email=rs.getString("email");
+				String birthday=rs.getDate("birthday").toString();
+				
+				p=new Passenger(fn,ln,gender,pass,expiration_date,email,birthday);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (ps != null) {
+				try {
+					ps.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return p;
+	}
+	
 	// 查询所有航班，并返回装有Flight对象的arraylist
 	public ArrayList<Flight> getAllFlights() {
 		ArrayList<Flight> flights = new ArrayList<>();
