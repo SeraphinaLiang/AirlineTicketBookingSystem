@@ -711,7 +711,7 @@ public class SQLDemo {
 				String baggage = rs.getString("baggage_allowance");
 				String meal = rs.getString("special_meal");
 				String theclass = rs.getString("class");
-				String add=rs.getString("baggage_add");
+				String add = rs.getString("baggage_add");
 
 				t = new Ticket(ticketNo, passport, flight, baggage, meal, theclass);
 				t.setBaggageAdd(add);
@@ -856,10 +856,10 @@ public class SQLDemo {
 	}
 
 //-----------------------------------------------------------------------------------------------
-	
+
 	public Passenger getPassengerFromPassportNo(String pass) {
 		Passenger p = null;
-		
+
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 
@@ -870,16 +870,16 @@ public class SQLDemo {
 			rs = ps.executeQuery();
 
 			while (rs.next()) {
-				String fn=rs.getString("firstname");
-				String ln=rs.getString("lastname");
-				int gender=rs.getInt("gender");
-				String expiration_date=rs.getDate("expiration_date").toString();
-				String email=rs.getString("email");
-				String birthday=rs.getDate("birthday").toString();
-				
-				p=new Passenger(fn,ln,gender,pass,expiration_date,email,birthday);
+				String fn = rs.getString("firstname");
+				String ln = rs.getString("lastname");
+				int gender = rs.getInt("gender");
+				String expiration_date = rs.getDate("expiration_date").toString();
+				String email = rs.getString("email");
+				String birthday = rs.getDate("birthday").toString();
+
+				p = new Passenger(fn, ln, gender, pass, expiration_date, email, birthday);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -901,7 +901,7 @@ public class SQLDemo {
 
 		return p;
 	}
-	
+
 	// 查询所有航班，并返回装有Flight对象的arraylist
 	public ArrayList<Flight> getAllFlights() {
 		ArrayList<Flight> flights = new ArrayList<>();
@@ -941,6 +941,152 @@ public class SQLDemo {
 			// 完成后关闭
 			rs.close();
 
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return flights;
+	}
+
+	// 查询航班 单程
+	public ArrayList<Flight> getFlightsSingleTrip(String de, String ar) {
+		ArrayList<Flight> flights = new ArrayList<>();
+		PreparedStatement ps = null;
+		try {
+			String sql;
+			sql = "SELECT flight_number,departure_city,arrival_city,departure_day,arrival_day,"
+					+ "departure_time,arrival_time,plane_type,company,isCancel" 
+					+ " FROM flight "
+					+ "WHERE departure_city= ? and arrival_city = ? ";
+			
+			ResultSet rs;
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, de);
+			ps.setString(2, ar);
+			
+			rs = ps.executeQuery();
+
+			// 展开结果集数据库
+			while (rs.next()) {
+				// 通过字段检索
+				String flightNumber = rs.getString("flight_number");
+				String departure_city = rs.getString("departure_city");
+				String arrival_city = rs.getString("arrival_city");
+
+				Date departure_day = rs.getDate("departure_day");
+				Date arrival_day = rs.getDate("arrival_day");
+				Time departure_time = rs.getTime("departure_time");
+				Time arrival_time = rs.getTime("arrival_time");
+
+				String plane_type = rs.getString("plane_type");
+				String company = rs.getString("company");
+				int cancel = rs.getInt("isCancel");
+				// --------------------------------------
+				String departureDay = departure_day.toString();
+				String arrivalDay = arrival_day.toString();
+				String departureTime = departure_time.toString();
+				String arrivalTime = arrival_time.toString();
+				// ------------------------------------------
+				Flight f = new Flight(flightNumber, departure_city, arrival_city, departureDay, arrivalDay,
+						departureTime, arrivalTime, plane_type, company, cancel);
+				flights.add(f);
+			}
+			// 完成后关闭
+			rs.close();
+			ps.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return flights;
+	}
+    
+	//查询航班 往返
+	public ArrayList<Flight> getFlightsReturnTrip(String de, String ar) {
+		ArrayList<Flight> flights = new ArrayList<>();
+		PreparedStatement ps = null;
+		
+		try {
+			String sql1;
+			sql1 = "SELECT flight_number,departure_city,arrival_city,departure_day,arrival_day,"
+					+ "departure_time,arrival_time,plane_type,company,isCancel" 
+					+ " FROM flight "
+					+ "WHERE departure_city= ? and arrival_city = ? ";
+			
+			ResultSet rs;
+			ps = conn.prepareStatement(sql1);
+			ps.setString(1, de);
+			ps.setString(2, ar);
+			
+			rs = ps.executeQuery();
+
+			// 展开结果集数据库
+			while (rs.next()) {
+				// 通过字段检索
+				String flightNumber = rs.getString("flight_number");
+				String departure_city = rs.getString("departure_city");
+				String arrival_city = rs.getString("arrival_city");
+
+				Date departure_day = rs.getDate("departure_day");
+				Date arrival_day = rs.getDate("arrival_day");
+				Time departure_time = rs.getTime("departure_time");
+				Time arrival_time = rs.getTime("arrival_time");
+
+				String plane_type = rs.getString("plane_type");
+				String company = rs.getString("company");
+				int cancel = rs.getInt("isCancel");
+				// --------------------------------------
+				String departureDay = departure_day.toString();
+				String arrivalDay = arrival_day.toString();
+				String departureTime = departure_time.toString();
+				String arrivalTime = arrival_time.toString();
+				// ------------------------------------------
+				Flight f = new Flight(flightNumber, departure_city, arrival_city, departureDay, arrivalDay,
+						departureTime, arrivalTime, plane_type, company, cancel);
+				flights.add(f);
+			}
+				
+			//-------------------------------------------------------------------
+			
+			
+			String sql2;
+			sql2 = "SELECT flight_number,departure_city,arrival_city,departure_day,arrival_day,"
+					+ "departure_time,arrival_time,plane_type,company,isCancel" 
+					+ " FROM flight "
+					+ "WHERE departure_city= ? and arrival_city = ? ";
+			
+			ps = conn.prepareStatement(sql2);
+			ps.setString(1, ar);
+			ps.setString(2, de);
+			
+			rs = ps.executeQuery();
+
+			// 展开结果集数据库
+			while (rs.next()) {
+				// 通过字段检索
+				String flightNumber = rs.getString("flight_number");
+				String departure_city = rs.getString("departure_city");
+				String arrival_city = rs.getString("arrival_city");
+
+				Date departure_day = rs.getDate("departure_day");
+				Date arrival_day = rs.getDate("arrival_day");
+				Time departure_time = rs.getTime("departure_time");
+				Time arrival_time = rs.getTime("arrival_time");
+
+				String plane_type = rs.getString("plane_type");
+				String company = rs.getString("company");
+				int cancel = rs.getInt("isCancel");
+				// --------------------------------------
+				String departureDay = departure_day.toString();
+				String arrivalDay = arrival_day.toString();
+				String departureTime = departure_time.toString();
+				String arrivalTime = arrival_time.toString();
+				// ------------------------------------------
+				Flight f = new Flight(flightNumber, departure_city, arrival_city, departureDay, arrivalDay,
+						departureTime, arrivalTime, plane_type, company, cancel);
+				flights.add(f);
+			}
+			
+			rs.close();
+			ps.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

@@ -2,6 +2,7 @@ package screen;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -171,7 +172,7 @@ public class flightScheduleController implements Initializable {
 									}
 
 									String ticketNo = new String();
-									int hash = Math.abs(flightNo.hashCode()*passport.hashCode());
+									int hash = Math.abs(flightNo.hashCode() * passport.hashCode());
 									ticketNo = (hash + String.valueOf(getRandom())).substring(0, 9);
 
 									Main.getSQLDemo().generateTicket(ticketNo, flightNo, passport, baggage, theclass);
@@ -203,36 +204,51 @@ public class flightScheduleController implements Initializable {
 
 	int getRandom() {
 		double j = System.currentTimeMillis();
-        
+
 		double i = Math.random() * 100;
 		return (int) (j * i);
 	}
 
 	@FXML
-	void searchFlight(ActionEvent event) {//TODO
+	void searchFlight(ActionEvent event) {// TODO
 
 		String departCity = null;
 		String desCity = null;
-		int tripType = 1; // 1-oneway 2-roundtrip
-		String departDate;
-		String returnDate;
 
 		if (!this.tfDeparture.getText().isEmpty()) {
-			departCity = this.tfDeparture.getText();
-		}
-		if (!this.tfDestination.getText().isEmpty()) {
-			desCity = this.tfDestination.getText();
-		}
+			if (!this.tfDestination.getText().isEmpty()) {
+				departCity = this.tfDeparture.getText().toUpperCase();
+				desCity = this.tfDestination.getText().toUpperCase();
 
-		if (this.rbOneWay.isSelected()) {
-			tripType = 1;
-			departDate = this.departureDate.getValue().toString();// 2020-01-29
-		} else if (this.rbRoundTrip.isSelected()) {
-			tripType = 2;
-			departDate = this.departureDate.getValue().toString();// 2020-01-29
-			returnDate = this.returnDate.getValue().toString();
+				if (this.rbRoundTrip.isSelected()) {
+					// 往返--------------------------
+					refreshFlightCell(Main.sql.getFlightsReturnTrip(departCity, desCity));
+				} else {
+					// single trip
+					refreshFlightCell(Main.sql.getFlightsSingleTrip(departCity, desCity));
+				}
+			}
 		}
+	}
+	
+	void refreshFlightCell(ArrayList<Flight> flights) {
 
+		this.flightInfo.setCellFactory(new Callback<ListView<FlightCell>, ListCell<FlightCell>>() {
+			@Override
+			public ListCell<FlightCell> call(ListView<FlightCell> arg0) {
+				ListCell<FlightCell> cell = new ListCell<FlightCell>() {
+					@Override
+					protected void updateItem(FlightCell n, boolean bt) {
+						super.updateItem(n, bt);
+						if (n != null) {
+							setGraphic(n.getHbox());
+						}
+					}
+				};
+				return cell;
+			}
+		});
+		this.flightInfo.setItems(Utility.getSearchFlightSchedule(flights));
 	}
 
 	@FXML
