@@ -1,2 +1,2 @@
 # AirlineTicketBookingSystem
-A class design project for database
+# 本科小课设
